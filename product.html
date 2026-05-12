@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product – Amazon</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <div class="navbar">
+            <div class="nav-logo border">
+                <a href="index.html"><div class="logo"></div></a>
+            </div>
+            <div class="nav-search" style="width:500px;">
+                <select class="search-select"><option>All</option></select>
+                <input type="text" placeholder="Search Amazon.in" class="search-input">
+                <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            </div>
+            <div class="nav-signin border" onclick="window.location='login.html'">
+                <p><span>Hello, sign in</span></p>
+                <p class="nav-second">Account & Lists</p>
+            </div>
+            <div class="nav-cart border" onclick="window.location='cart.html'">
+                <span class="cart-count" id="cartCount">0</span>
+                <i class="fa-solid fa-cart-shopping"></i> Cart
+            </div>
+        </div>
+        <div class="panel">
+            <div class="panel-all"><i class="fa-solid fa-bars"></i> All</div>
+            <div class="panel-options">
+                <p>Today's Deals</p>
+                <p>Customer Service</p>
+                <p>Electronics</p>
+                <p>Fashion</p>
+                <p>Books</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- BREADCRUMB -->
+    <div style="background:#fff; padding:10px 60px; font-size:0.85rem; color:#555;">
+        <a href="index.html" style="color:#007185;">Home</a> &gt;
+        <a href="index.html" style="color:#007185;">Electronics</a> &gt;
+        <span>Premium Watch</span>
+    </div>
+
+    <!-- PRODUCT DETAIL -->
+    <div class="product-page">
+        <div class="product-detail">
+
+            <!-- Image -->
+            <div class="product-detail-img"
+                 style="background-image: url('https://images.unsplash.com/photo-1523275335684-37898b6baf30');">
+            </div>
+
+            <!-- Info -->
+            <div class="product-detail-info">
+                <h1>Premium Analog Watch — Classic Edition</h1>
+                <div class="pd-rating">★★★★★ &nbsp;<span style="color:#007185; font-size:0.85rem;">4,521 ratings</span></div>
+
+                <hr style="border:none; border-top:1px solid #eee; margin:10px 0;">
+
+                <div class="pd-price">₹2,499</div>
+                <div class="pd-old-price">M.R.P: ₹5,999</div>
+                <div class="pd-savings">You save: ₹3,500 (58%)</div>
+
+                <div style="font-size:0.85rem; margin-bottom:15px;">
+                    <span style="color:#007600; font-weight:700; font-size:1rem;">In Stock</span><br>
+                    <span style="color:#555;">Ships from Amazon | Sold by TrendWatch Co.</span>
+                </div>
+
+                <button class="pd-add-cart" onclick="addToCart()">Add to Cart</button>
+                <button class="pd-buy-now" onclick="buyNow()">Buy Now</button>
+
+                <div class="pd-description">
+                    <strong>About this item:</strong>
+                    <ul style="margin-top:10px; padding-left:20px; line-height:1.8;">
+                        <li>Premium stainless steel case with mineral crystal glass</li>
+                        <li>Japanese quartz movement for accuracy</li>
+                        <li>Water resistant up to 30 meters</li>
+                        <li>Genuine leather strap — comfortable all-day wear</li>
+                        <li>Includes 2-year manufacturer warranty</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- MORE PRODUCTS -->
+        <div style="margin-top:40px;">
+            <h2 class="section-title">Customers Also Bought</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1546868871-7041f2a55e12');"></div>
+                    <div class="product-info">
+                        <p class="product-name">Smart Speaker</p>
+                        <div class="stars">★★★★☆</div>
+                        <p class="product-price">₹1,999 <span class="old-price">₹3,499</span></p>
+                        <button class="add-cart-btn" onclick="quickAdd('Smart Speaker','₹1,999','https://images.unsplash.com/photo-1546868871-7041f2a55e12', this)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1491553895911-0055eca6402d');"></div>
+                    <div class="product-info">
+                        <p class="product-name">Running Shoes</p>
+                        <div class="stars">★★★★☆</div>
+                        <p class="product-price">₹3,299 <span class="old-price">₹6,000</span></p>
+                        <button class="add-cart-btn" onclick="quickAdd('Running Shoes','₹3,299','https://images.unsplash.com/photo-1491553895911-0055eca6402d', this)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1585386959984-a4155224a1ad');"></div>
+                    <div class="product-info">
+                        <p class="product-name">Perfume Set</p>
+                        <div class="stars">★★★★★</div>
+                        <p class="product-price">₹899 <span class="old-price">₹1,800</span></p>
+                        <button class="add-cart-btn" onclick="quickAdd('Perfume Set','₹899','https://images.unsplash.com/photo-1585386959984-a4155224a1ad', this)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="foot-panel1" onclick="window.scrollTo({top:0,behavior:'smooth'})">▲ Back to Top</div>
+        <div class="foot-panel3">
+            <div class="logo"></div>
+        </div>
+        <div class="student-info">
+            <p>
+                <strong>Name:</strong> Sparsh Singh &nbsp;|&nbsp;
+                <strong>Section:</strong> CSE 24 &nbsp;|&nbsp;
+                <strong>Roll No:</strong> 2503201001179
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function updateCartCount() {
+            const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+            const el = document.getElementById('cartCount');
+            if (el) el.textContent = cart.length;
+        }
+
+        function addToCart() {
+            const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+            cart.push({
+                name: 'Premium Watch',
+                price: '₹2,499',
+                img: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30'
+            });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartCount();
+            alert('Added to Cart! Go to Cart to checkout.');
+        }
+
+        function buyNow() {
+            addToCart();
+            window.location = 'cart.html';
+        }
+
+        function quickAdd(name, price, img, btn) {
+            const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+            cart.push({ name, price, img });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartCount();
+            btn.textContent = '✓ Added!';
+            btn.style.backgroundColor = '#4CAF50';
+            setTimeout(() => {
+                btn.textContent = 'Add to Cart';
+                btn.style.backgroundColor = '#f0c14b';
+            }, 1500);
+        }
+
+        updateCartCount();
+    </script>
+</body>
+</html>

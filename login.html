@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Sign-In</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<body class="login-page">
+
+    <div class="login-logo">
+        <a href="index.html"><div class="logo"></div></a>
+    </div>
+
+    <div class="login-box">
+        <h2>Sign in</h2>
+
+        <label for="email">Email or mobile phone number</label>
+        <input type="text" id="email" placeholder="Enter email or phone">
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter password">
+
+        <button class="login-btn" onclick="handleLogin()">Continue</button>
+
+        <p class="small-text" style="margin-top:12px; text-align:left; font-size:0.78rem; color:#333;">
+            By continuing, you agree to Amazon's
+            <a href="#">Conditions of Use</a> and
+            <a href="#">Privacy Notice</a>.
+        </p>
+
+        <hr class="login-divider">
+
+        <p style="font-size:0.85rem; font-weight:700; color:#555; margin-bottom:8px;">New to Amazon?</p>
+        <button class="create-acc-btn" onclick="window.location='index.html'">Create your Amazon account</button>
+    </div>
+
+    <footer style="margin-top:20px;">
+        <div class="student-info">
+            <p>
+                <strong>Name:</strong> Sparsh Singh &nbsp;|&nbsp;
+                <strong>Section:</strong> CSE 24 &nbsp;|&nbsp;
+                <strong>Roll No:</strong> 2503201001179
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function handleLogin() {
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+            if (!email || !password) {
+                alert('Please fill in all fields.');
+                return;
+            }
+            alert('Welcome back! Redirecting to homepage...');
+            window.location = 'index.html';
+        }
+    </script>
+</body>
+</html>
